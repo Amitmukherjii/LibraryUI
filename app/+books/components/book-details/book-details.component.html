@@ -1,0 +1,26 @@
+<div class="book-details">
+   
+   <div class="book">
+  <lib-book 
+    [name]="book.name"
+    [author]="book.author"
+    [description] ="book.description"
+    >
+  </lib-book>
+    <!-- <lib-type [genres]="item.genres"></lib-type> -->
+    <div>
+        <a><button class="add-to-cart" (click)="addToCart(book)" >
+          Add to Cart
+        </button></a>
+        <!-- <button class="add-to-cart" (click)="addToCart(product)">
+          Add to bag
+        </button> -->
+    </div>
+    <!-- <div>
+        <button class="back-button">Back</button>
+      </div> -->
+
+
+   
+  </div>
+</div>

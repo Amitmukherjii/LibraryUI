@@ -1,0 +1,18 @@
+<div class="list-filter">
+  <lib-book-filter
+    [availableFilters]="filters"
+    [activatedFilters]="activeFilters"
+    (activeFilters)="updateActivatedFilters($event)"
+  ></lib-book-filter>
+</div>
+<div class="list-books">
+  <div class="list-book" *ngFor="let item of itemsAfterFilter()">
+    <lib-book
+      [id]="item.id"
+      [name]="item.name"
+      [author]="item.author"
+      [price]="item.price"
+      [description] ="item.description">
+    </lib-book>
+  </div>
+</div>

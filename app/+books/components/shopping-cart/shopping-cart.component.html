@@ -1,0 +1,12 @@
+<p>You have {{shoppingCartItems.length}} items in your bag</p>
+<div *ngFor="let item of shoppingCartItems">
+  <lib-book
+    [id]="item.id"
+    [name]="item.name"
+    [author]="item.author"
+    [description] ="item.description">
+  </lib-book>
+  <!-- <lib-type-list [type]="item.type"></lib-type-list> -->
+  <button class="remove-item" (click)="removeItem(item)">Remove</button>
+</div>
+<!-- <p>Total: {{getTotal() | async}}</p> -->

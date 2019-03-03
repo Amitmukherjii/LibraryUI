@@ -1,0 +1,23 @@
+
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+  <div class="navbar-nav">
+      <a class="nav-item nav-link" routerLink="/">Home</a>
+      <a class="nav-item nav-link" (click)="logout()">Logout</a>
+  </div>
+</nav>
+
+<div class="nav-bar">
+  <a *ngIf="location.path() !== '/books'" routerLink="/" class="back-button">Back</a>
+  <div class="open-shopping-cart" routerLink="/cart">
+    <img src="\assets\img\cart.png" style="height:84px; width:124;" >{{(shoppingCartItems$ | async).length}}
+  </div>
+</div>
+<div class="jumbotron">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 offset-md-3">
+              <router-outlet></router-outlet>
+          </div>
+      </div>
+  </div>
+</div>
